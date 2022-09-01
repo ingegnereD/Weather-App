@@ -1,0 +1,551 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(img/fog01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: steelblue; */
+    overflow: hidden;
+}
+
+.containeR {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.container-bucket {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+}
+
+.container-bucket .left-bucket {
+    width: 60%;
+    height: 100%;
+    /* background-color: greenyellow; */
+    position: relative;
+}
+
+.dash-btn {
+    display: none;
+}
+
+.left-bucket .left-bucket-top {
+    position: absolute;
+    top: 2rem;
+    left: 12%;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
+}
+
+.left-bucket .left-bucket-middle {
+    position: absolute;
+    top: 10rem;
+    left: 8%;
+    color: white;
+    width: 90%;
+    height: 10rem;
+    /* background-color: greenyellow; */
+}
+
+.left-bucket-middle>h3 {
+    font-size: 4rem;
+}
+
+.left-bucket .left-bucket-bottom {
+    position: absolute;
+    bottom: 4rem;
+    left: 12%;
+    background: transparent;
+    width: max-content;
+    height: 9rem;
+    display: grid;
+    grid-template-columns: 17rem auto auto;
+    gap: 1.5rem;
+    color: white;
+    /* background-color: green; */
+}
+
+.left-bucket-bottom .degree {
+    height: 100%;
+    width: 100;
+    color: rebeccapurple;
+}
+
+.left-bucket-bottom h1 {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 7rem;
+    font-weight: 600;
+    color: white;
+}
+
+.left-bucket-bottom .location-date {
+    height: 100%;
+    width: max-content;
+    /* background-color: steelblue; */
+    display: grid;
+    grid-template-rows: auto 3rem;
+}
+
+.location-date .map {
+    color: red;
+    margin-bottom: 0.5rem;
+}
+
+.location-date>h3 {
+    height: 100%;
+    color: white;
+    margin-right: 0;
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 5px;
+    font-size: 4rem;
+}
+
+.location-date .map {
+    /* height: rem; */
+    font-size: 3.5rem;
+    background-color: transparent;
+}
+
+.location-date>h6 {
+    height: 100%;
+    color: white;
+    margin-top: 0;
+    margin-left: 1rem;
+    letter-spacing: 5px;
+}
+
+.left-bucket-bottom .weather-icon-name {
+    width: auto;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.3rem;
+}
+
+.left-icon {
+    /* display: none; */
+    color: red;
+    height: 6rem;
+    width: 6rem;
+}
+
+
+/* .......................END OF LEFT BUCKET................... */
+
+.container-bucket .right-bucket {
+    width: 40%;
+    height: 100%;
+    background: rgb(74, 71, 71);
+    opacity: 0.8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: .3rem;
+    display: block;
+}
+
+.right-bucket-container {
+    width: 98%;
+    height: 96%;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ............THE SEARCH ICON......... */
+
+.right-bucket-top {
+    height: 40%;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-rows: 3rem auto;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgb(184, 178, 178);
+}
+
+.right-bucket-top .first-element {
+    width: 100%;
+    height: 4.5rem;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 2rem auto 4.5rem;
+    gap: 0.5rem;
+    /* border-bottom: 3px solid grey; */
+}
+
+.close-btn-container {
+    display: block;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    bottom: 0;
+}
+
+.close-slider,
+.close-btn {
+    color: white;
+    font-size: 2rem;
+    transition: all 100ms ease-in-out;
+}
+
+.close-slider {
+    color: red;
+    display: none;
+}
+
+.close-slider:hover {
+    color: rgb(215, 208, 208);
+    font-size: 2.3rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: rgb(215, 208, 208);
+    font-size: 2.3rem;
+    cursor: pointer;
+}
+
+.location-name-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: greenyellow; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#location-name {
+    margin-bottom: 0rem;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.find-location {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.find-location .find-btn {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    transition: all 200ms ease-in-out;
+}
+
+.change-find-btn {
+    color: red;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.find-btn:hover {
+    color: rgb(215, 208, 208);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.right-bucket-top .other-location-list {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    list-style: none;
+}
+
+.other-location-list li {
+    height: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: rgb(177, 167, 167);
+    transition: all 300ms ease-in-out;
+    width: max-content;
+}
+
+.other-location-list li:hover {
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.right-bucket-bottom {
+    height: 60%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.right-bucket-bottom h4 {
+    font-weight: 600;
+    color: rgb(177, 167, 167);
+}
+
+.weather-condition {
+    color: rgb(205, 200, 200);
+}
+
+table {
+    border: 1px solid rgb(177, 167, 167);
+    border-collapse: separate;
+    color: rgb(177, 167, 167);
+}
+
+thead th {
+    font-size: 1.5rem;
+    width: calc(100%/4);
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+
+tbody td {
+    font-size: 1.3rem;
+    /* border-right: 1px solid grey; */
+    border-bottom: 1px solid grey;
+}
+
+td:first-child {
+    text-align: start;
+}
+
+td {
+    /* background-color: red; */
+    max-height: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+tbody tr:first-child {
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 22px;
+}
+
+tr td:not(first-child) {
+    text-align: center;
+}
+
+
+/* ...................MEDIA QUERIES................... */
+
+
+/* .............TABLETS AND SMALL LAPTOPS............. */
+
+@media screen and (max-width:1250px) {
+    .containeR {}
+    .container-bucket {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .container-bucket .left-bucket {
+        width: 50%;
+    }
+    .location-date {
+        width: 100%;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+    }
+    .location-date>h6 {
+        margin: 0 auto;
+    }
+    .left-bucket .left-bucket-bottom {
+        position: absolute;
+        bottom: 0rem;
+        left: 25%;
+        /* background: red; */
+        width: max-content;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .left-bucket-bottom .degree {
+        width: 120%;
+        height: 7rem;
+        left: -10%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        position: relative;
+        /* background-color: greenyellow; */
+    }
+    .weather-icon-name .weather-icon {
+        position: absolute;
+        top: 0;
+        right: 0rem;
+        height: 7rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .dash-btn {
+        display: none;
+    }
+    /* ...........END OF FIRST MQ LEFT BOCKET........... */
+    .container-bucket .right-bucket {
+        width: 50%;
+        display: block;
+    }
+}
+
+
+/* .......................MOBILE DEVICES............... */
+
+@media screen and (max-width:767px) {
+    body {
+        /* position: fixed; */
+    }
+    .dash-btn {
+        display: block;
+    }
+    .container-bucket .left-bucket {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .left-bucket .left-bucket-bottom {
+        position: absolute;
+        left: 15%;
+        bottom: 8rem;
+        /* background: red; */
+        width: max-content;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left-bucket-bottom .degree {
+        width: 100%;
+        height: 7rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        position: relative;
+    }
+    .weather-icon-name .weather-icon {
+        position: absolute;
+        top: 0;
+        right: -2rem;
+        height: 7rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .location-date {
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+    }
+    .location-date>h3 {
+        margin-left: -0rem;
+    }
+    /* ..............THE MENU ICON ON THE RIGHT CORNER......... */
+    .menu-slide {
+        background: transparent;
+        width: 3rem;
+        height: 3rem;
+        position: absolute;
+        right: 0;
+        top: 1rem;
+    }
+    .menu-slide .dash-btn {
+        color: white;
+        font-size: 3rem;
+        transition: all 50ms ease-in-out;
+    }
+    .menu-slide .dash-btn:hover {
+        /* color: rgb(34, 108, 193); */
+        font-size: 3.1rem;
+        cursor: pointer;
+    }
+    .container-bucket .right-bucket {
+        position: absolute;
+        right: -1000rem;
+        display: block;
+        width: fit-content;
+        transition: all 500ms ease-in-out;
+        display: none;
+    }
+    .slideFieldIn {
+        position: absolute;
+        right: -1000rem;
+        display: none;
+        width: fit-content;
+        transition: all 300ms ease-in-out;
+        animation: slideIn 4s ease forwards;
+    }
+    @keyframes slideIn {
+        100% {
+            display: block;
+            right: 0;
+        }
+    }
+    .right-bucket-top {
+        width: 105%;
+        margin-right: -1rem;
+    }
+    .close-slider {
+        display: block;
+    }
+    .slideFieldOut {
+        /* right: -1000rem; */
+        display: none;
+        animation: slideAway 4s ease forwards;
+    }
+    @keyframes slideAway {
+        from {
+            right: 0;
+        }
+        to {
+            right: -1000rem;
+        }
+    }
+    .showFieldSliderBtn {}
+}

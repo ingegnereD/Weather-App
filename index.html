@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="index.css">
+
+
+</head>
+
+<body>
+    <div class="containeR">
+        <div class="container-bucket">
+            <div class="left-bucket">
+                <div class="menu-slide">
+                    <span class="material-icons-sharp dash-btn">menu</span>
+                </div>
+                <div class="left-bucket-top">
+                    <p>irg.weather.nig</p>
+                </div>
+                <div class="left-bucket-middle">
+                    <h4>Weather Prediction:</h4>
+                </div>
+                <div class="left-bucket-bottom">
+                    <span class="degree"><h1>21<sup>o</sup></h1></span>
+                    <div class="location-date">
+                        <h3><span class="material-icons-sharp map">location_on</span>Ile-Ife</h3>
+                        <h6>01:25 - Mon, 29 Aug 22</h6>
+                    </div>
+                    <div class="weather-icon-name">
+                        <span class="weather-icon"><img src="" alt="rain"></span>
+                        <h6 class="weather-name">Rainy</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- ...............END OF LEFT SIDE ............... -->
+            <div class="right-bucket">
+                <div class="right-bucket-container">
+                    <div class="right-bucket-top">
+                        <div class="first-element">
+                            <div class="close-btn-container">
+                                <span class="material-icons-sharp close-slider">arrow_forward</span>
+                                <span class="material-icons-sharp close-btn">close</span>
+                            </div>
+                            <form class="location-name-container">
+                                <input type="text" name="location-name" id="location-name" placeholder="Another Location">
+                            </form>
+                            <div class="find-location">
+                                <span class="material-icons-sharp find-btn">search</span>
+                            </div>
+                        </div>
+                        <ul class="other-location-list">
+                            <!-- this should be the history of the last four cities -->
+                            <li class="quick-find">Akure</li>
+                            <li class="quick-find">Ilesha</li>
+                            <li class="quick-find">Oshogbo</li>
+                            <li class="quick-find">Lagos</li>
+                        </ul>
+                    </div>
+                    <div class="right-bucket-bottom">
+                        <h4 class="right-bottom-head">
+                            Status Report
+                        </h4>
+                        <table class="weather-condition">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Humidy</th>
+                                    <th>Icon</th>
+                                    <th>FeelsLike</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Today</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesday</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Thursday</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Friday</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="Weather.js"></script>
+    <script src="UI.js"></script>
+    <script src="Storage.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
